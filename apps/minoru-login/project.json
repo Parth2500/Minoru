@@ -1,9 +1,9 @@
 {
-  "name": "minoru",
+  "name": "minoru-login",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "minoru",
-  "sourceRoot": "apps/minoru/src",
+  "sourceRoot": "apps/minoru-login/src",
   "tags": [],
   "targets": {
     "build": {
@@ -12,19 +12,19 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/apps/minoru",
-        "index": "apps/minoru/src/index.html",
-        "main": "apps/minoru/src/main.ts",
+        "outputPath": "dist/apps/minoru-login",
+        "index": "apps/minoru-login/src/index.html",
+        "main": "apps/minoru-login/src/main.ts",
         "polyfills": [
           "zone.js"
         ],
-        "tsConfig": "apps/minoru/tsconfig.app.json",
+        "tsConfig": "apps/minoru-login/tsconfig.app.json",
         "assets": [
-          "apps/minoru/src/favicon.ico",
-          "apps/minoru/src/assets"
+          "apps/minoru-login/src/favicon.ico",
+          "apps/minoru-login/src/assets"
         ],
         "styles": [
-          "apps/minoru/src/styles.scss"
+          "apps/minoru-login/src/styles.scss"
         ],
         "scripts": []
       },
@@ -53,8 +53,8 @@
           "namedChunks": true,
           "fileReplacements": [
             {
-              "replace": "apps/minoru/src/environments/environment.ts",
-              "with": "apps/minoru/src/environments/environment.development.ts"
+              "replace": "apps/minoru-login/src/environments/environment.ts",
+              "with": "apps/minoru-login/src/environments/environment.development.ts"
             }
           ]
         }
@@ -65,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "minoru:build:production"
+          "browserTarget": "minoru-login:build:production"
         },
         "development": {
-          "browserTarget": "minoru:build:development"
+          "browserTarget": "minoru-login:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "minoru:build"
+        "browserTarget": "minoru-login:build"
       }
     },
     "lint": {
@@ -86,8 +86,8 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "apps/minoru/**/*.ts",
-          "apps/minoru/**/*.html"
+          "apps/minoru-login/**/*.ts",
+          "apps/minoru-login/**/*.html"
         ]
       }
     },
@@ -97,7 +97,7 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "apps/minoru/jest.config.ts",
+        "jestConfig": "apps/minoru-login/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -110,7 +110,7 @@
     "serve-static": {
       "executor": "@nrwl/web:file-server",
       "options": {
-        "buildTarget": "minoru:build"
+        "buildTarget": "minoru-login:build"
       }
     }
   }
